@@ -1,0 +1,34 @@
+Début
+    longueur = 0
+    mots = 0
+    voyelle = 0
+    voyelles = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' }
+    mot = FAUX
+    
+        Si char = '.'
+            Sortir de la boucle
+        Fin Si
+        
+        longueur = longueur + 1
+        
+        Si char est dans voyelles
+            voyelle = voyelle + 1
+        Fin Si
+        
+        Si char = ' '
+         Si mot = VRAI
+                mots = mots + 1
+                mot = FAUX
+         Fin Si
+        Sinon
+            mot = VRAI
+        Fin Sinon
+    
+        Si mot = VRAI
+        mots = mots + 1
+        Fin Si
+    
+    Afficher "Longueur: ", longueur
+    Afficher "Nombre de mots: ", mots
+    Afficher "Nombre de voyelles: ", voyelle
+Fin
