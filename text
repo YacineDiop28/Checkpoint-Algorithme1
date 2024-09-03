@@ -2,9 +2,11 @@ Début
     longueur = 0
     mots = 0
     voyelle = 0
-    voyelles = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' }
+    voyelles = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     mot = FAUX
     
+    Tant que vrai
+        char = Lire un caractère
         Si char = '.'
             Sortir de la boucle
         Fin Si
@@ -16,19 +18,17 @@ Début
         Fin Si
         
         Si char = ' '
-         Si mot = VRAI
+            Si mot = VRAI
                 mots = mots + 1
                 mot = FAUX
-         Fin Si
+            Fin Si
         Sinon
             mot = VRAI
         Fin Sinon
-    
-        Si mot = VRAI
-        mots = mots + 1
-        Fin Si
+    Fin Tant que
     
     Afficher "Longueur: ", longueur
     Afficher "Nombre de mots: ", mots
     Afficher "Nombre de voyelles: ", voyelle
 Fin
+
